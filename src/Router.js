@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import { Router, Scene, Stack } from 'react-native-router-flux';
 import { View, StyleSheet } from "react-native";
 import MovieList from './components/MovieList';
+import TabBarComponent from './components/TabBar';
+
 
 export default class RouterComponent extends Component {
 
@@ -10,9 +12,9 @@ export default class RouterComponent extends Component {
         return (
             <Router>
                 <Scene key="list">
-                    <Scene key="MovieList"
-                        component={MovieList}
-                        title="MovieList"
+                    <Scene key="TabBar"
+                        component={TabBarComponent}
+                        title="TabBar"
                         initial
                         hideNavBar />
                 </Scene>

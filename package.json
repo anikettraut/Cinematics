@@ -9,7 +9,11 @@
   "dependencies": {
     "react": "^16.3.0-alpha.1",
     "react-native": "0.54.2",
+    "react-native-gesture-handler": "^1.0.0-alpha.41",
     "react-native-router-flux": "^4.0.0-beta.28",
+    "react-native-scrollable-tab-view": "^0.8.0",
+    "react-native-tab-view": "^0.0.74",
+    "react-native-tabbed-view-pager-android": "^1.0.4",
     "react-redux": "^5.0.7",
     "redux": "^3.7.2",
     "redux-thunk": "^2.2.0"

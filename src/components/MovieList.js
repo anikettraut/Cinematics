@@ -15,6 +15,8 @@ import { connect } from 'react-redux'
 import { bindActionCreators } from 'redux';
 import fetchMovieData from '../actions/MovieAction'
 import logoImg from '../images/ic_tmdb.png';
+import { IMAGE_BASE_URL } from '../utils/constants'
+
 
 
 const { width, height } = Dimensions.get('window');
@@ -64,7 +66,7 @@ class MovieList extends Component {
     renderRowItem = (itemData) => {
         return (
             <View style={{ flex: 1, flexDirection: 'column', margin: 1, padding: 5 }}>
-                <Image style={styles.ImageComponentStyle} source={{ uri: "http://t1.gstatic.com/images?q=tbn:ANd9GcQPpcKQ9eWZGxJe6eXyCW91eayLVm4KqruvJz3GP0F2T2w46yKZ" }} />
+                <Image style={styles.ImageComponentStyle} source={{ uri: IMAGE_BASE_URL+itemData.item.poster_path }} />
                 <Text style={styles.ItemTextStyle} numberOfLines={1} >{itemData.item.title}</Text>
             </View>
         )
@@ -74,7 +76,7 @@ class MovieList extends Component {
     renderRowItemList = (itemData) => {
         return (
             <View style={styles.rowList}>
-                <Image style={styles.ListImageComponentStyle} source={{ uri: "http://t1.gstatic.com/images?q=tbn:ANd9GcQPpcKQ9eWZGxJe6eXyCW91eayLVm4KqruvJz3GP0F2T2w46yKZ" }} />
+                <Image style={styles.ListImageComponentStyle} source={{ uri: IMAGE_BASE_URL+itemData.item.poster_path }} />
                 <View style={styles.rowListView}>
                     <Text style={styles.yearTextStyle}> {itemData.item.release_date.substring(0, itemData.item.release_date.indexOf('-'))} </Text>
                     <Text style={{ color: 'black' }}> {itemData.item.title} </Text>
