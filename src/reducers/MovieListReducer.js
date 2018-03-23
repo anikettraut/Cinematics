@@ -1,7 +1,8 @@
-import { FETCHING_LIST, FETCHING_LIST_SUCCESS, FETCHING_LIST_FAILURE } from '../utils/constants'
+import { FETCHING_LIST, FETCHING_LIST_SUCCESS, FETCHING_LIST_FAILURE} from '../utils/constants'
 
 const initialState = {
     MovieListData: [],
+    MovieDetails: [],
     isFetchingList: false,
     page: 1,
     error: false

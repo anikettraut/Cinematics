@@ -1,5 +1,5 @@
 rootProject.name = 'Cinematics'
-include ':react-native-tabbed-view-pager-android'
-project(':react-native-tabbed-view-pager-android').projectDir = new File(rootProject.projectDir, '../node_modules/react-native-tabbed-view-pager-android/android')
+include ':react-native-gesture-handler'
+project(':react-native-gesture-handler').projectDir = new File(rootProject.projectDir, '../node_modules/react-native-gesture-handler/android')
 
 include ':app'
